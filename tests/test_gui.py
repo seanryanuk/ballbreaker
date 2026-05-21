@@ -1,5 +1,3 @@
-import sys
-import pytest
 
 
 def test_gui_imports():

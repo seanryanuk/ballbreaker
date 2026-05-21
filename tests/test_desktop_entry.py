@@ -1,9 +1,6 @@
-import pytest
-from pathlib import Path
 from ballbreaker.core.desktop_entry import (
     create_desktop_entry,
     create_symlink,
-    LauncherError,
 )
 
 

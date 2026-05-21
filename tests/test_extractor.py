@@ -1,4 +1,3 @@
-import os
 import tarfile
 import pytest
 from pathlib import Path
@@ -8,7 +7,6 @@ from ballbreaker.core.extractor import (
     find_executables,
     is_writable,
     list_tarball_executables,
-    ExtractorError,
 )
 
 
