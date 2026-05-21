@@ -1,1 +1,1 @@
-from ballbreaker.gui.widgets.dropzone import DropZone
+from ballbreaker.gui.widgets.dropzone import DropZone as DropZone

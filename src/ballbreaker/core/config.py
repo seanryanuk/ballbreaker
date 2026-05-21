@@ -9,8 +9,9 @@ DEFAULT_CONFIG = {
     "install_dir": "/opt",
     "bin_dir": str(Path.home() / ".local" / "bin"),
     "desktop_dir": str(Path.home() / ".local" / "share" / "applications"),
-    "elevate": True
+    "elevate": True,
 }
+
 
 def load_config() -> Dict[str, Any]:
     """
@@ -19,7 +20,7 @@ def load_config() -> Dict[str, Any]:
     """
     if not CONFIG_FILE.exists():
         return DEFAULT_CONFIG.copy()
-    
+
     try:
         with open(CONFIG_FILE, "r", encoding="utf-8") as f:
             data = json.load(f)
@@ -49,7 +50,7 @@ def save_config(config: Dict[str, Any]) -> bool:
                     cleaned_config[key] = val
             else:
                 cleaned_config[key] = DEFAULT_CONFIG[key]
-                
+
         with open(CONFIG_FILE, "w", encoding="utf-8") as f:
             json.dump(cleaned_config, f, indent=4)
         return True
