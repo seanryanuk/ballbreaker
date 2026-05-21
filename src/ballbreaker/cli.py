@@ -1,3 +1,4 @@
+import os
 import sys
 import argparse
 from pathlib import Path
@@ -5,7 +6,6 @@ from ballbreaker.core.extractor import (
     check_tarball,
     extract_tarball,
     find_executables,
-    is_writable,
     ExtractorError,
     PermissionRequiredError
 )

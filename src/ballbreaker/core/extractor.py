@@ -2,7 +2,6 @@ import os
 import tarfile
 import shutil
 import subprocess
-import tempfile
 from pathlib import Path
 from typing import List, Tuple, Optional
 

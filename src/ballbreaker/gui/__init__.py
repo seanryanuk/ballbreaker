@@ -1,1 +1,1 @@
-from ballbreaker.gui.app import MainWindow
+from ballbreaker.gui.app import MainWindow as MainWindow
