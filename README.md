@@ -4,6 +4,10 @@ Ballbreaker is a modern Linux GUI and CLI application for installing and managin
 
 It safely extracts tarballs to system paths (like `/opt`) or custom directory hierarchies (like `~/Apps`), creates symbolic links for executable files, and generates compliant `.desktop` launch entries registered with your desktop environment.
 
+
+> AI Disclaimer: This project makes heavy use of AI and Agentic tools - The primary setup for this repo is currently Google Antigravity + Gemini 3.5 Flash (High).
+
+
 ## Features
 - **Aesthetic GUI**: Modern dark-theme PySide6 interface.
 - **Configurable Paths**: Choose where tarballs are extracted and where desktop shortcuts are saved.
