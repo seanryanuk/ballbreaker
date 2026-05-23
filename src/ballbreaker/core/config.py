@@ -56,3 +56,16 @@ def save_config(config: Dict[str, Any]) -> bool:
         return True
     except Exception:
         return False
+
+
+def get_resource_path(relative_path: str) -> Path:
+    """
+    Get the absolute path to a resource. Works for development
+    and when the application is compiled/frozen using PyInstaller.
+    """
+    import sys
+    if hasattr(sys, "_MEIPASS"):
+        return Path(sys._MEIPASS) / relative_path
+    # Path to /src/ballbreaker (parent of core)
+    return Path(__file__).parent.parent / relative_path
+

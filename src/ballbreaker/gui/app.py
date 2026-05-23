@@ -21,6 +21,7 @@ from PySide6.QtWidgets import (
 )
 from PySide6.QtCore import QThread, Signal
 
+from PySide6.QtGui import QIcon
 from ballbreaker.core.extractor import (
     check_tarball,
     extract_tarball,
@@ -28,7 +29,7 @@ from ballbreaker.core.extractor import (
     is_writable,
 )
 from ballbreaker.core.desktop_entry import create_desktop_entry, create_symlink
-from ballbreaker.core.config import load_config, save_config
+from ballbreaker.core.config import load_config, save_config, get_resource_path
 from ballbreaker.gui.widgets.dropzone import DropZone
 from ballbreaker.gui.stylesheet import STYLE
 
@@ -130,6 +131,11 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Ballbreaker 🍒")
         self.resize(560, 680)
         self.setStyleSheet(STYLE)
+        
+        # Set window icon
+        icon_path = get_resource_path("resources/icon.png")
+        if icon_path.exists():
+            self.setWindowIcon(QIcon(str(icon_path)))
 
         self.selected_tarball: Optional[Path] = None
         self.worker: Optional[InstallWorker] = None
